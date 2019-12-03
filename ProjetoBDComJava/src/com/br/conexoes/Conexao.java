@@ -10,24 +10,22 @@ import java.sql.Statement;
  * **/
 public class Conexao {
 	//Atributo de conexao com o banco de dados
-	private Connection conexao;
+	private Connection conexao;	
 	
+	//Url de conexao
+	private String sUrlConnection = "jdbc:sqlite:D:/Projetos JAVA/BancoDeDadosComJava/ProjetoBDComJava/src/com/br/banco_de_dados/banco_sqlite.db";
 	/**
 	 * Realiza a conexão com o banco de dados 
 	 * @return true - A conexao foi realizada
 	 * @throws ClassNotFoundException 
 	 */
 	public boolean Conectar() throws ClassNotFoundException 
-	{
-		String sUrlConnection = "";
-		
+	{		
 		try 
 		{
 			//Comando para abrir a biblioteca do Sqlite
 			Class.forName("org.sqlite.JDBC");
 			
-			//Url de conexao
-			sUrlConnection = "jdbc:sqlite:D:/Projetos JAVA/BancoDeDadosComJava/ProjetoBDComJava/src/com/br/banco_de_dados/banco_sqlite.db";
 			
 			//Conectar com o banco
 			this.conexao = DriverManager.getConnection(sUrlConnection);
@@ -68,6 +66,10 @@ public class Conexao {
 		return true; // Caso desconecte retorna verdadeiro
 	}
 	
+	/**
+	 * Cria e retorna um statement
+	 * @return
+	 */
 	public Statement CreateStatement() 
 	{
 		try {
@@ -77,5 +79,28 @@ public class Conexao {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	/**
+	 * Outra forma de se realiza conexao com o banco de dados
+	 * @return
+	 */
+	public static Connection RealizaConexao() 
+	{
+		String sUrlConnection = "jdbc:sqlite:D:/Projetos JAVA/BancoDeDadosComJava/ProjetoBDComJava/src/com/br/banco_de_dados/banco_sqlite.db";
+		Connection conn = null;
+		
+		try 
+		{
+			//Estabelece a url de conexao com o banco de dados
+			conn = DriverManager.getConnection(sUrlConnection);
+		}
+		catch (SQLException sqlErr) 
+		{
+			System.err.println(sqlErr.getMessage());
+		}
+		
+		//Retorna a conexao
+		return conn;
 	}
 }

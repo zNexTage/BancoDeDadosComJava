@@ -92,14 +92,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getNome() {
         // TODO implement here
-        return "";
+        return this.Nome;
     }
 
     /**
      * @param value
      */
     public void setNome(String value) {
-        // TODO implement here
+        this.Nome = value;
     }
 
     /**
@@ -107,14 +107,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getSobrenome() {
         // TODO implement here
-        return "";
+        return this.Sobrenome;
     }
 
     /**
      * @param value
      */
     public void setSobrenome(String value) {
-        // TODO implement here
+    	this.Sobrenome = value;
     }
 
     /**
@@ -122,14 +122,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getEmail() {
         // TODO implement here
-        return "";
+        return this.Email;
     }
 
     /**
      * @param value
      */
     public void setEmail(String value) {
-        // TODO implement here
+    	this.Email = value;
     }
 
     /**
@@ -137,14 +137,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getCPF() {
         // TODO implement here
-        return "";
+        return this.CPF;
     }
 
     /**
      * @param value
      */
     public void setCPF(String value) {
-        // TODO implement here
+    	this.CPF = value;
     }
 
     /**
@@ -152,14 +152,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getRG() {
         // TODO implement here
-        return "";
+        return this.RG;
     }
 
     /**
      * @param value
      */
     public void setRG(String value) {
-        // TODO implement here
+    	this.RG = value;
     }
 
     /**
@@ -167,14 +167,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getEstadoCivil() {
         // TODO implement here
-        return "";
+        return this.EstadoCivil;
     }
 
     /**
      * @param value
      */
     public void setEstadoCivil(String value) {
-        // TODO implement here
+    	this.EstadoCivil = value;
     }
 
     /**
@@ -182,14 +182,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getRegimeBens() {
         // TODO implement here
-        return "";
+        return this.RegimeBens;
     }
 
     /**
      * @param value
      */
     public void setRegimeBens(String value) {
-        // TODO implement here
+    	this.RegimeBens = value;
     }
 
     /**
@@ -197,14 +197,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getEstadoNaturalidade() {
         // TODO implement here
-        return "";
+        return this.EstadoNaturalidade;
     }
 
     /**
      * @param value
      */
     public void setEstadoNaturalidade(String value) {
-        // TODO implement here
+    	this.EstadoNaturalidade = value;
     }
 
     /**
@@ -212,14 +212,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getNomeDoPai() {
         // TODO implement here
-        return "";
+        return this.NomeDoPai;
     }
 
     /**
      * @param value
      */
     public void setNomeDoPai(String value) {
-        // TODO implement here
+    	this.NomeDoPai = value;
     }
 
     /**
@@ -227,14 +227,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getNomeDaMae() {
         // TODO implement here
-        return "";
+        return this.NomeDaMae;
     }
 
     /**
      * @param value
      */
     public void setNomeDaMae(String value) {
-        // TODO implement here
+    	this.NomeDaMae = value;
     }
 
     /**
@@ -242,14 +242,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public char getSexo() {
         // TODO implement here
-        return '0';
+        return this.Sexo;
     }
 
     /**
      * @param value
      */
     public void setSexo(char value) {
-        // TODO implement here
+    	this.Sexo = value;
     }
 
     /**
@@ -257,14 +257,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getEscolaridade() {
         // TODO implement here
-        return "";
+        return this.Escolaridade;
     }
 
     /**
      * @param value
      */
     public void setEscolaridade(String value) {
-        // TODO implement here
+    	this.Escolaridade = value;
     }
 
     /**
@@ -272,14 +272,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getProfissao() {
         // TODO implement here
-        return "";
+        return this.Profissao;
     }
 
     /**
      * @param value
      */
     public void setProfissao(String value) {
-        // TODO implement here
+    	this.Profissao = value;
     }
 
     /**
@@ -287,14 +287,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public String getAnotacoes() {
         // TODO implement here
-        return "";
+        return this.Anotacoes;
     }
 
     /**
      * @param value
      */
     public void setAnotacoes(String value) {
-        // TODO implement here
+    	this.Anotacoes = value;
     }
 
     /**
@@ -302,14 +302,14 @@ public class PessoaFisica extends DadosAdicionais {
      */
     public Date getDataNascimento() {
         // TODO implement here
-        return null;
+        return this.DataNascimento;
     }
 
     /**
      * @param value
      */
     public void setDataNascimento(Date value) {
-        // TODO implement here
+    	this.DataNascimento = value;
     }
 
 }
