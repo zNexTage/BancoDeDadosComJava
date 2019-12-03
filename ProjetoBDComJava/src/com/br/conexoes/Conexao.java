@@ -3,6 +3,7 @@ package com.br.conexoes;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /*
  * @autor Christian de Oliveira
@@ -65,5 +66,16 @@ public class Conexao {
 			
 		}
 		return true; // Caso desconecte retorna verdadeiro
+	}
+	
+	public Statement CreateStatement() 
+	{
+		try {
+			return conexao.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
