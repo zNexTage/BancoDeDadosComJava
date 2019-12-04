@@ -12,7 +12,17 @@ public class PessoaFisica extends DadosAdicionais {
     public PessoaFisica() {
     }
 
-    /**
+    private int Id_Pessoa_Fisica;
+    
+    public int getId_Pessoa_Fisica() {
+		return Id_Pessoa_Fisica;
+	}
+
+	public void setId_Pessoa_Fisica(int id_Pessoa_Fisica) {
+		Id_Pessoa_Fisica = id_Pessoa_Fisica;
+	}
+
+	/**
      * 
      */
     private String Nome;

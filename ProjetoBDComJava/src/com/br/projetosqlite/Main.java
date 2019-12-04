@@ -9,6 +9,7 @@ import java.util.Date;
 import com.br.banco_de_dados.CreateTable;
 import com.br.banco_de_dados.InsertInto;
 import com.br.banco_de_dados.SelectFrom;
+import com.br.banco_de_dados.Update;
 import com.br.conexoes.Conexao;
 import com.br.projetosqlite.Model.PessoaFisica;
 
@@ -21,6 +22,7 @@ public class Main {
 		Calendar calendario;
 		Date dtAniversario;
 		SelectFrom selectFrom;
+		Update AtualizarDados;
 		
 		try {
 			createTable.CreateTablePessoaFisica();
@@ -34,10 +36,10 @@ public class Main {
 		
 		pessoaFisica = new PessoaFisica();
 		
-		pessoaFisica.setNome("Ayanami");
-		pessoaFisica.setSobrenome("Rei");
-		pessoaFisica.setCPF("444.666.111-80");
-		pessoaFisica.setRG("40.410.589-80");
+		pessoaFisica.setNome("Asuka");
+		pessoaFisica.setSobrenome("Langley");
+		pessoaFisica.setCPF("451.214.545-90");
+		pessoaFisica.setRG("30.310.559-70");
 		pessoaFisica.setEstadoCivil("Solteira");
 		pessoaFisica.setRegimeBens("-");
 		pessoaFisica.setEstadoNaturalidade("Tókio");
@@ -46,13 +48,13 @@ public class Main {
 		pessoaFisica.setSexo('F');
 		pessoaFisica.setEscolaridade("Não mencionado");
 		pessoaFisica.setProfissao("Piloto de mecha");
-		pessoaFisica.setAnotacoes("Seria rei a mâe de Shinji?");
+		pessoaFisica.setAnotacoes("Nada a declarar");
 		
 		calendario = Calendar.getInstance();
 		
-		calendario.set(Calendar.DATE, 30);
-		calendario.set(Calendar.MONTH, 03);
-		calendario.set(Calendar.YEAR, 2003);
+		calendario.set(Calendar.DATE, 12);
+		calendario.set(Calendar.MONTH, 04);
+		calendario.set(Calendar.YEAR, 2001);
 		
 		dtAniversario = calendario.getTime();
 		
@@ -60,8 +62,25 @@ public class Main {
 		
 		insertInto.InserirPessoaFisica(pessoaFisica);*/
 		
+		//Instancia a classe de update
+		AtualizarDados = new Update();
+		
+		//Instancia a class de pessoas fisicas
+		pessoaFisica = new PessoaFisica();
+		
+		//Seta os valores parfa o update
+		pessoaFisica.setId_Pessoa_Fisica(2);
+		pessoaFisica.setNome("SORYU");
+		pessoaFisica.setSobrenome("ASUKA");
+		pessoaFisica.setCPF("562.859.748-90");
+		
+		//Chama o metodo para atualzar os dados
+		AtualizarDados.AtualizarPessoaFisica(pessoaFisica);
+		
+		//Instancia a classe para realiza a consulta
 		selectFrom = new SelectFrom();
 		
+		//Realiza um select do dados
 		selectFrom.SelectPessoaFisica();
 	}
 
