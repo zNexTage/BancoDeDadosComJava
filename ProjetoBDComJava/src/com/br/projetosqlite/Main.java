@@ -8,6 +8,7 @@ import java.util.Date;
 
 import com.br.banco_de_dados.CreateTable;
 import com.br.banco_de_dados.InsertInto;
+import com.br.banco_de_dados.SelectFrom;
 import com.br.conexoes.Conexao;
 import com.br.projetosqlite.Model.PessoaFisica;
 
@@ -19,6 +20,7 @@ public class Main {
 		PessoaFisica pessoaFisica;
 		Calendar calendario;
 		Date dtAniversario;
+		SelectFrom selectFrom;
 		
 		try {
 			createTable.CreateTablePessoaFisica();
@@ -28,7 +30,7 @@ public class Main {
 		}
 		
 		//Instancia a classe para podermos inserir dados na tabela de pessoas fisica
-		insertInto = new InsertInto();
+		/*insertInto = new InsertInto();
 		
 		pessoaFisica = new PessoaFisica();
 		
@@ -56,7 +58,11 @@ public class Main {
 		
 		pessoaFisica.setDataNascimento(dtAniversario);
 		
-		insertInto.InserirPessoaFisica(pessoaFisica);
+		insertInto.InserirPessoaFisica(pessoaFisica);*/
+		
+		selectFrom = new SelectFrom();
+		
+		selectFrom.SelectPessoaFisica();
 	}
 
 }
